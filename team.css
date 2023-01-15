@@ -10,7 +10,6 @@
   font-family: 'Audiowide', cursive;
   font-size: 110px;
   padding: 0 9%;
-  line-height: 1rem;
 }
 
 @keyframes neon {
@@ -41,8 +40,7 @@
 
 @media (max-width:530px) {
   .neon h1 {
-    font-size: 55px;
-    line-height: -1rem;
+    font-size: 50px;
   }
 }
 
