@@ -1,0 +1,196 @@
+
+/* heading-text */
+
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide');
+
+.neon h1 {
+  margin: 8rem auto 4rem;
+  animation: neon 1s ease infinite;
+  font-family: 'Audiowide', cursive;
+  font-size: 110px;
+  padding: 0 9%;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #48abe0, 0 0 20px #48abe0, 0 0 20px #48abe0, 0 0 20px #48abe0, 0 0 2px #00334e, 2px 2px 2px #000;
+    color: #f5efcb;
+  }
+  50% {
+    text-shadow: 0 0 2px #00334e, 0 0 5px #00334e, 0 0 5px #00334e, 0 0 5px #00334e, 0 0 2px #00334e, 4px 4px 2px #000;
+    color: #48abe0;
+  }
+}
+
+
+@media (max-width:1050px) {
+  .neon h1 {
+    font-size: 90px;
+  }
+}
+
+
+@media (max-width:775px) {
+  .neon h1 {
+    font-size: 65px;
+  }
+}
+
+@media (max-width:530px) {
+  .neon h1 {
+    font-size: 55px;
+  }
+}
+
+/* #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+} */
+
+/* default card styling */
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding-top: 5%;
+    text-align: center; /* modified */
+    color: #fff; /* modified */
+    font-family: 'Noto Sans JP', sans-serif;
+    
+    /* background-image: linear-gradient(180deg, #000000, #0A2647,#0A2647,#000000); */
+
+    background-image: url("https://w0.peakpx.com/wallpaper/370/405/HD-wallpaper-sci-fi-circuit-board-black-circuits-green-computer.jpg");
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-color: #000; */
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 6rem 5vw;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+    margin: 0 10% 0;
+    background-color: black;
+    box-shadow: 0 0 5px 2px #48abe0;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 30px 15px #48abe0;
+  }
+
+  .new-card {
+    margin-top: 20%;
+  }
+
+  .card__image {      
+    width: 100%;
+    height: auto;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+    background-color: black; /* modified */
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+    background-color: black; /* modified */
+  }
+
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card__arc path {
+    /* fill: var(--surface-color); */
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }       
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 1.2rem;
+    margin: 0 0 .3em;
+    color: #86E5FF;
+  }
+  
+  /* .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";  
+    font-size: .8em; 
+    color: #D7BDCA;  
+  } */
+  
+  .card__status {
+    font-size: .8em;
+    color: #fff;
+  }
+  
+  .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #fff;
+    font-family: "MockFlowFont";   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    background-color: black; /* modified */
+  }    
