@@ -41,6 +41,7 @@
 @media (max-width:530px) {
   .neon h1 {
     font-size: 55px;
+    line-height: -1rem;
   }
 }
 
